@@ -1,52 +1,381 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>About | The Glow Republic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .about-card:hover {
+            border-color: #d4af37;
+        }
+        
+        .cursive-title {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive;
+            color: #d4af37;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .vision-card, .mission-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+        }
+        
+        .vision-card:hover, .mission-card:hover {
+            border-color: #d4af37;
+        }
+        
+        .vm-container {
+            display: flex;
+            gap: 30px;
+            max-width: 900px;
+            margin: 40px auto;
+            flex-wrap: wrap;
+        }
+        
+        .vm-container > div {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .story-card, .philosophy-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #e8e0d5;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .story-card:hover, .philosophy-card:hover {
+            border-color: #d4af37;
+        }
+        
+        .team-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .team-member {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 25px;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            border-color: #d4af37;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        
+        .team-member h3 {
+            margin-bottom: 5px;
+            color: #4a3b2c;
+        }
+        
+        .team-title {
+            color: #d4af37;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .team-bio {
+            font-size: 0.9rem;
+            color: #8b7a6b;
+            line-height: 1.5;
+        }
+        
+        .features-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feature {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 20px;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            border-color: #d4af37;
+        }
+        
+        .feature-img {
+            width: 100%;
+            max-width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-img:hover {
+            border-color: #d4af37;
+            transform: scale(1.02);
+        }
+        
+        .visit-block {
+            background: #faf0e0;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #e8c9a0;
+            max-width: 900px;
+            margin: 40px auto;
+            transition: all 0.3s ease;
+        }
+        
+        .visit-block:hover {
+            border-color: #d4af37;
+            background: #fdf5e8;
+        }
+        
+        .visit-block h3 {
+            color: #4a3b2c;
+            margin-bottom: 15px;
+        }
+        
+        .visit-block p {
+            margin-bottom: 10px;
+        }
+        
+        .cursive-main {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive;
+            color: #d4af37;
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            font-weight: normal;
+        }
+        
+        .team-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 20px auto 40px;
+            color: #8b7a6b;
+        }
+        
+        /* LOGO IMAGE STYLES */
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .site-logo {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            background-color: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid #e8e0d5;
+            margin-top: 50px;
+        }
+        
+        nav {
+            padding: 20px 0 20px 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e8e0d5;
+        }
+        
+        nav a {
+            color: #8b7a6b;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        nav a:hover {
+            color: #d4af37;
+        }
+        
+        h1, h2 {
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .vm-container, .team-grid, .features-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .cursive-main {
+                font-size: 2rem;
+            }
+            .cursive-title {
+                font-size: 1.5rem;
+            }
+            .visit-block {
+                margin: 20px;
+            }
+            .team-member {
+                min-width: 100%;
+            }
+            .feature-img {
+                max-width: 100%;
+                height: 120px;
+            }
+            nav a {
+                margin-right: 15px;
+                font-size: 0.7rem;
+            }
+            .site-logo {
+                max-width: 90px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-      <p>
-        <a href="index.html">HOME</a> | 
-        <a href="about.html">ABOUT</a> | 
-        <a href="services.html">SERVICES</a> | 
-        <a href="testimonials.html">TESTIMONIALS</a> |
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
         <a href="contact.html">CONTACT</a>
-      </p>
-      <img src="images/logo.jpg">
+    </nav>
 
-      <h1>About The Glow Republic</h1>
-      <img src="images/studiofront.jpg">
+    <!-- IMAGE LOGO -->
+    <div class="logo-container">
+        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+    </div>
 
-      <h2>Our Story</h2>
-      <p>We opened in Sunninghill, Sandton in 2025.</p>
-      <p>We wanted to create a space for real beauty with real care.</p>
-      <p>No filters. No pressure. Just quality treatments.</p>
-      <p>Our clients leave feeling confident and refreshed.</p>
-   
-      <h2>Our Philosophy</h2>
-      <p>Every face is different. We treat you as an individual.</p>
-      <p>We use professional-grade, cruelty-free products.</p>
-      <p>We train monthly to stay up to date with techniques.</p>
-      <p>Your safety and happiness come first.</p>
-     
-      <h2>Our Vision</h2>
-      <p>To be a glow-focused beauty brand that empowers clients to feel confident, radiant and naturally beautiful.</p>
-      <p>We believe every person deserves to feel good in their own skin.</p>
-      <p>Our goal is to grow The Glow Republic into a trusted name in aesthetic beauty.</p>
-      <p>We want to set the standard for quality, care and natural results.</p>
-     
-      <h2>Our Mission</h2>
-      <p>At The Glow Republic, we provide soft results-driven beauty treatments in a warm and elegant environment.</p>
-      <p>We focus on enhancing natural beauty while creating a relaxing and personalized experience for every client.</p>
-      <p>Every treatment is tailored to your unique face shape, skin type and needs.</p>
-      <p>We listen, we care and  we deliver results you will love.</p>
+    <h1 class="cursive-main">About The Glow Republic</h1>
 
-      <h3>Why Choose Us</h3>
-      <p>Located in Sunninghill with free parking.</p>
-      <p>Certified and friendly team.</p>
-      <p>Clean, relaxing studio environment.</p>
-      <p>Walk-ins welcome, appointments recommended.</p>
-      
+    <div class="story-card">
+        <h2>Our Story — From Dream to Reality</h2>
+        <p>The Glow Republic opened its doors in early 2025, but the vision for this space has been years in the making. Our founder, a passionate aesthetic professional with over 8 years of industry experience, recognized a gap in the Sunninghill market for a studio that prioritizes client education, honest recommendations, and exceptional results without the hard sell.</p>
+        <p>After months of planning, renovating, and assembling a team of like-minded beauty experts, The Glow Republic was born. We chose Sunninghill for its vibrant community of professionals, families, and self-care seekers who deserve a premium aesthetic destination right on their doorstep.</p>
+        <p>Since opening, we've been humbled by the warm reception from our local community. Every day, we strive to live up to our name — helping our clients achieve that unmistakable glow that comes from feeling confident in your own skin.</p>
+    </div>
+
+    <div class="philosophy-card">
+        <h2>Our Philosophy — Beauty With Integrity</h2>
+        <p>At The Glow Republic, we believe that the best beauty treatments are the ones that work with your natural features, not against them. We reject the filtered, unrealistic beauty standards that dominate social media and instead focus on enhancing what makes you uniquely beautiful.</p>
+        <p>Every treatment begins with a thorough consultation. We assess your face shape, skin type, lash health, and aesthetic goals before recommending any service. This personalized approach ensures that you never leave with a result that feels wrong for you.</p>
+        <p>We also believe in transparency. If a treatment isn't right for you, we'll tell you. If we think you'd benefit from a different approach, we'll explain why. Our goal isn't to sell you the most expensive service — it's to help you look and feel your absolute best, period.</p>
+        <p>Our commitment to quality extends to the products we use. We exclusively stock professional-grade, cruelty-free, and hypoallergenic brands that we've personally tested and trust. Your safety and satisfaction are never compromised.</p>
+    </div>
+
+    <div class="vm-container">
+        <div class="vision-card">
+            <h2 class="cursive-title">Our Vision</h2>
+            <p>To be South Africa's most trusted glow-focused beauty brand — one that empowers every client to feel confident, radiant, and naturally beautiful.</p>
+            <p>We envision a future where The Glow Republic expands to multiple locations, bringing our unique blend of technical excellence and genuine care to more communities. But no matter how much we grow, our commitment to personalized, honest service will never change.</p>
+        </div>
+        <div class="mission-card">
+            <h2 class="cursive-title">Our Mission</h2>
+            <p>To provide soft, results-driven beauty treatments in a warm and elegant environment, focusing on enhancing natural beauty while creating a relaxing and personalized experience for every client.</p>
+            <p>We measure our success not by how many clients we see, but by how many leave feeling truly happy with their results. Every smile, every head turn, every "I love them!" is what keeps us passionate about what we do.</p>
+        </div>
+    </div>
+
+    <h2>Meet Our Expert Team</h2>
+    <p class="team-intro">Behind every beautiful result is a skilled, caring technician. Our team is the heart of The Glow Republic, and we're proud to introduce you to the faces behind the brand.</p>
+    
+    <div class="team-grid">
+        <div class="team-member">
+            <img src="images/team1.jpg" alt="Ashley Ndawana">
+            <h3>Ashley Ndawana</h3>
+            <p class="team-title">Senior Brow Artist & Lash Specialist</p>
+            <p class="team-bio">With 6 years of experience in brow lamination, microblading, and lash extensions, Ashley is our resident perfectionist. She's trained in advanced brow mapping techniques and has completed certifications with leading aesthetic academies. Her attention to detail ensures every client leaves with perfectly balanced brows.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/team2.jpg" alt="Natasha Lenonyane">
+            <h3>Natasha Lenonyane</h3>
+            <p class="team-title">Lead Facial Therapist</p>
+            <p class="team-bio">Natasha specializes in corrective skincare and advanced facial treatments. She's passionate about helping clients understand their skin and build routines that work for them. Her calming energy and expert touch make every facial feel like a mini-vacation. She's certified in chemical peels and LED therapy.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/team3.jpg" alt="Priya Singh">
+            <h3>Priya Singh</h3>
+            <p class="team-title">Lash Extension Artist</p>
+            <p class="team-bio">Priya joined our team with a background in fine arts, which makes her lash application incredibly precise and artistic. She creates stunning classic, hybrid, and volume sets that perfectly frame your eyes. Her gentle technique and careful isolation ensure comfortable application and long-lasting results.</p>
+        </div>
+    </div>
+    
+    <p class="team-intro" style="margin-top: 0;">All our technicians participate in monthly training workshops to stay current with the latest techniques, safety protocols, and product innovations. We invest in our team so they can deliver the best possible experience to you.</p>
+
+    <h2>Why Choose The Glow Republic</h2>
+    <div class="features-grid">
+        <div class="feature">
+            <img src="images/location.jpg" alt="Convenient Location - Sunninghill" class="feature-img">
+            <h3>📍 Convenient Location</h3>
+            <p>We're located in the heart of Sunninghill with free, secure parking. Easy access from Rivonia Road and Maxwell Drive.</p>
+        </div>
+        <div class="feature">
+            <img src="images/team-photo.jpg" alt="Our Certified Team" class="feature-img">
+            <h3>🌸 Certified Team</h3>
+            <p>Our team is fully certified and participates in ongoing monthly training to stay current with the latest industry techniques and safety standards.</p>
+        </div>
+        <div class="feature">
+            <img src="images/clean-studio.jpg" alt="Clean Studio Environment" class="feature-img">
+            <h3>🧼 Clean Studio</h3>
+            <p>All tools are sterilized to medical-grade standards, and our studio maintains the highest levels of cleanliness and hygiene.</p>
+        </div>
+        <div class="feature">
+            <img src="images/walkins.jpg" alt="Walk-ins Welcome" class="feature-img">
+            <h3>👋 Walk-ins Welcome</h3>
+            <p>Walk-ins welcome, but appointments are recommended to avoid waiting. Same day bookings available subject to availability.</p>
+        </div>
+    </div>
+
+    <div class="visit-block">
+        <h3>📍 Visit Our Sunninghill Studio</h3>
+        <p>Unit 4, The Aesthetic Hub, Cnr Maxwell Drive and Rivonia Road, Sunninghill, Sandton, 2191</p>
+        <p>🅿️ Free parking behind the building (enter via Maxwell Drive)</p>
+        <p>🚗 From Sandton CBD: Take Rivonia Road north, turn left at Maxwell Drive. We're on the ground floor, next to the plant shop.</p>
+        <p>⏰ Monday-Friday 9am-6pm | Saturday 9am-4pm | Sunday & Public Holidays Closed</p>
+        <p>📞 Call or WhatsApp us: +27 81 234 5678</p>
+    </div>
+
+    <footer>
+        <p>Sunninghill, Sandton, South Africa</p>
+    </footer>
 
 </body>
 </html>
