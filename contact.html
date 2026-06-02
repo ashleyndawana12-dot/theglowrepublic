@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | The Glow Republic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .two-columns {
+            display: flex;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+            flex-wrap: wrap;
+        }
+        
+        .contact-card {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+            min-width: 250px;
+        }
+        
+        .contact-card:hover {
+            border-color: #d4af37;
+        }
+        
+        .contact-card h3 {
+            margin-bottom: 20px;
+            color: #4a3b2c;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-card p {
+            margin-bottom: 12px;
+            color: #8b7a6b;
+            line-height: 1.6;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #e8e0d5;
+            border-radius: 0;
+            background-color: white;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        
+        .submit-btn {
+            background-color: transparent;
+            color: #8b7a6b;
+            padding: 12px 25px;
+            border: 1px solid #d4af37;
+            border-radius: 0;
+            cursor: pointer;
+            font-weight: 400;
+            letter-spacing: 2px;
+            width: 100%;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        /* LOGO IMAGE STYLES */
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .site-logo {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            background-color: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        
+        .page-intro {
+            text-align: center;
+            margin: 20px 0 30px;
+            color: #8b7a6b;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid #e8e0d5;
+            margin-top: 50px;
+        }
+        
+        nav {
+            padding: 20px 0 20px 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e8e0d5;
+        }
+        
+        nav a {
+            color: #8b7a6b;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        nav a:hover {
+            color: #d4af37;
+        }
+        
+        @media (max-width: 768px) {
+            .two-columns {
+                flex-direction: column;
+                gap: 20px;
+                margin: 20px auto;
+            }
+            .contact-card {
+                padding: 20px;
+            }
+            nav a {
+                margin-right: 15px;
+                font-size: 0.7rem;
+            }
+            .site-logo {
+                max-width: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <!-- IMAGE LOGO -->
+    <div class="logo-container">
+        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+    </div>
+
+    <p class="page-intro">We'd love to hear from you! Our team typically responds within 4 hours.</p>
+
+    <div class="two-columns">
+        <div class="contact-card">
+            <h3>Get in Touch</h3>
+            <div class="contact-detail">
+                <p>📞 Phone: +27 81 234 5678</p>
+                <p>💬 WhatsApp: +27 81 234 5678</p>
+                <p>✉️ Email: glow@theglowrepublic.co.za</p>
+                <p>📷 Instagram: @theglowrepublic</p>
+            </div>
+        </div>
+        
+        <div class="contact-card">
+            <h3>Visit Us</h3>
+            <div class="contact-detail">
+                <p>Unit 4, The Aesthetic Hub<br>Cnr Maxwell Drive and Rivonia Road<br>Sunninghill, Sandton, 2191</p>
+                <p>🅿️ Free parking behind the building</p>
+                <p>🚗 Enter via Maxwell Drive</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-columns">
+        <div class="contact-card">
+            <h3>Business Hours</h3>
+            <p>Monday - Friday: 9am - 6pm</p>
+            <p>Saturday: 9am - 4pm</p>
+            <p>Sunday: Closed</p>
+            <p>Public Holidays: Closed</p>
+            <p><em style="font-size: 0.85rem;">Last appointments 1 hour before closing</em></p>
+        </div>
+        
+        <div class="contact-card">
+            <h3>Book an Appointment</h3>
+            <input type="text" placeholder="Your Name">
+            <input type="tel" placeholder="Phone Number">
+            <select>
+                <option>Select a service</option>
+                <option>Brow Shaping</option>
+                <option>Brow Lamination</option>
+                <option>Brow Tint</option>
+                <option>Classic Lash Extensions</option>
+                <option>Volume Lash Extensions</option>
+                <option>Lash Lift and Tint</option>
+                <option>Hydrating Facial</option>
+                <option>Deep Clean Facial</option>
+                <option>Brightening Facial</option>
+                <option>Not sure - consultation</option>
+            </select>
+            <button class="submit-btn">SEND ENQUIRY →</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Sunninghill, Sandton, South Africa</p>
+    </footer>
+
+</body>
+</html>
