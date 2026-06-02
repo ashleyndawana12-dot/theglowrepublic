@@ -1,54 +1,429 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Home | The Glow Republic</title>
+    <title>Home | The Glow Republic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero {
+            text-align: center;
+            margin: 30px 0 50px;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+            color: #4a3b2c;
+        }
+        
+        .hero p {
+            font-size: 1rem;
+            color: #8b7a6b;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: #8b7a6b;
+            padding: 10px 30px;
+            border: 1px solid #d4af37;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .services-row {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+        
+        .service-item {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .service-item img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .service-item h3 {
+            margin-top: 15px;
+            color: #4a3b2c;
+        }
+        
+        .gallery-section {
+            margin: 60px 0;
+        }
+        
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-title h2 {
+            color: #4a3b2c;
+        }
+        
+        .gallery-title p {
+            color: #8b7a6b;
+            font-size: 0.85rem;
+        }
+        
+        .scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+            cursor: grab;
+        }
+        
+        .scroll-container:active {
+            cursor: grabbing;
+        }
+        
+        .scroll-wrapper {
+            display: inline-block;
+            white-space: nowrap;
+        }
+        
+        .gallery-item {
+            display: inline-block;
+            width: 280px;
+            margin-right: 20px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+            white-space: normal;
+            vertical-align: top;
+        }
+        
+        .gallery-item:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .gallery-caption h4 {
+            color: #4a3b2c;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .gallery-caption p {
+            color: #8b7a6b;
+            font-size: 0.75rem;
+            margin: 0;
+        }
+        
+        .before-badge {
+            display: inline-block;
+            background-color: #d4af37;
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .after-badge {
+            display: inline-block;
+            background-color: #e8c9c0;
+            color: #4a3b2c;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .scroll-container::-webkit-scrollbar-track {
+            background: #f0e8e0;
+            border-radius: 10px;
+        }
+        
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 10px;
+        }
+        
+        .scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #c49a3a;
+        }
+        
+        /* LOGO IMAGE STYLES */
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .site-logo {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            background-color: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        
+        nav {
+            padding: 20px 0 20px 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e8e0d5;
+        }
+        
+        nav a {
+            color: #8b7a6b;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        nav a:hover {
+            color: #d4af37;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid #e8e0d5;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .services-row {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .gallery-item {
+                width: 240px;
+            }
+            .gallery-item img {
+                height: 240px;
+            }
+            nav a {
+                margin-right: 15px;
+                font-size: 0.7rem;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .site-logo {
+                max-width: 90px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-      <p>
-        <a href="index.html">HOME</a> | 
-        <a href="about.html">ABOUT</a> | 
-        <a href="services.html">SERVICES</a> | 
-        <a href="testimonials.html">TESTIMONIALS</a> |
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
         <a href="contact.html">CONTACT</a>
-      </p>
-      <img src="images/logo.jpg">
+    </nav>
 
-      <h1>The Glow Republic</h1>
-      <p>Glow naturally with The Glow Republic</p>
-      <p>Book Now</p>
+    <!-- IMAGE LOGO -->
+    <div class="logo-container">
+        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+    </div>
 
-      <h2>Facials treatments</h2>
-      <p>Custom hydrating, brightening and anti-pollution treatments.</p>
-      <img src="images/facial.jpg">
+    <div class="hero">
+        <h1>The Glow Republic</h1>
+        <p>Glow naturally with The Glow Republic</p>
+        <a href="contact.html" class="btn">BOOK NOW</a>
+    </div>
 
-      <h2>Lash Extensions</h2>
-      <p>Classic, hybrid and volume sets.</p>
-      <img src="images/lashes.jpg">
+    <div class="services-row">
+        <div class="service-item">
+            <img src="images/facial.jpg" alt="Facials">
+            <h3>Facials</h3>
+        </div>
+        <div class="service-item">
+            <img src="images/lashes.jpg" alt="Lash Extensions">
+            <h3>Lash Extensions</h3>
+        </div>
+        <div class="service-item">
+            <img src="images/brows.jpg" alt="Brow Shaping">
+            <h3>Brow Shaping</h3>
+        </div>
+    </div>
 
-      <h2>Brow Procedures</h2>
-      <p>Precision tatooing.</p>
-      <img src="images/brows.jpg">
+    <h2 style="text-align: center;">About Us</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto;">Enhancing your natural beauty with expert care in Sunninghill, Sandton. Established in 2025, we focus on quality and client comfort.</p>
 
-      <h2>About Us</h2>
-      <p>Enhancing your natural beauty with expert care in Sunninghill, Sandton.</p>
-      <p>Established in 2025, we focus on quality and client comfort.</p>
-      <p>No hard sell. Just skilled hands and honest advice.</p>
-      <p>We study your face shape, skin type and lash health before every service.</p>
+    <div class="gallery-section">
+        <div class="gallery-title">
+            <h2>Before & After Gallery</h2>
+            <p>← Drag or scroll sideways to see all 16 transformations →</p>
+        </div>
+        
+        <div class="scroll-container">
+            <div class="scroll-wrapper">
+                <div class="gallery-item">
+                    <img src="images/brow-before1.jpg" alt="Brows before">
+                    <div class="gallery-caption">
+                        <span class="before-badge">BEFORE</span>
+                        <h4>Brow Shaping</h4>
+                        <p>Before treatment - unruly brows</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/brow-after1.jpg" alt="Sword ombré brows after">
+                    <div class="gallery-caption">
+                        <span class="after-badge">AFTER</span>
+                        <h4>Brow Shaping</h4>
+                        <p>Clean, defined, natural shape</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/brow-before2.jpg" alt="Brow lamination before">
+                    <div class="gallery-caption">
+                        <span class="before-badge">BEFORE</span>
+                        <h4>Brow Lamination</h4>
+                        <p>Flat, unruly brow hairs</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/brow-after2.jpg" alt="Brow lamination after">
+                    <div class="gallery-caption">
+                        <span class="after-badge">AFTER</span>
+                        <h4>Brow Lamination</h4>
+                        <p>Lifted, fluffy, full brows</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lash-before1.jpg" alt="Lashes before">
+                    <div class="gallery-caption">
+                        <span class="before-badge">BEFORE</span>
+                        <h4>Classic Lashes</h4>
+                        <p>Short, straight natural lashes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lash-after1.jpg" alt="Classic lashes after">
+                    <div class="gallery-caption">
+                        <span class="after-badge">AFTER</span>
+                        <h4>Classic Lashes</h4>
+                        <p>Natural, elegant extension set</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lash-before2.jpg" alt="Volume lashes before">
+                    <div class="gallery-caption">
+                        <span class="before-badge">BEFORE</span>
+                        <h4>Volume Lashes</h4>
+                        <p>Sparse, thin natural lashes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lash-after2.jpg" alt="Volume lashes after">
+                    <div class="gallery-caption">
+                        <span class="after-badge">AFTER</span>
+                        <h4>Volume Lashes</h4>
+                        <p>Full, dramatic volume set</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/facial-before1.jpg" alt="Facial during procedure">
+                    <div class="gallery-caption">
+                        <span class="before-badge">BEFORE</span>
+                        <h4>Deep Clean Facial</h4>
+                        <p>Congested, dull skin</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/facial-after1.jpg" alt="Facial after">
+                    <div class="gallery-caption">
+                        <span class="after-badge">AFTER</span>
+                        <h4>Deep Clean Facial</h4>
+                        <p>Clear, glowing complexion</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/facial-before2.jpg" alt="algae peel before">
+                    <div class="gallery-caption">
+                        <span class="before-badge">BEFORE</span>
+                        <h4>Hydrating Facial</h4>
+                        <p>Dry, dehydrated skin</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/facial-after2.jpg" alt="algae peel after">
+                    <div class="gallery-caption">
+                        <span class="after-badge">AFTER</span>
+                        <h4>Hydrating Facial</h4>
+                        <p>Plump, radiant, hydrated</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery4.jpg" alt="waiting area">
+                    <div class="gallery-caption">
+                        <h4>Our Studio</h4>
+                        <p>Relaxing, elegant space</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery5.jpg" alt="Lash application">
+                    <div class="gallery-caption">
+                        <h4>Lash Application</h4>
+                        <p>Precision and care</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery7.jpg" alt="Facial treatment">
+                    <div class="gallery-caption">
+                        <h4>Custom Facial</h4>
+                        <p>Tailored to your skin</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery8.jpg" alt="Studio reception">
+                    <div class="gallery-caption">
+                        <h4>Warm Welcome</h4>
+                        <p>Comfortable, elegant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-      <h3>Gallery</h3>
-      <p>Brow transformation</p>
-      <img src="images1.jpg">
-      <p>Lash set result</p>
-      <img src="images2.jpg">
-      <p>Facial glow</p>
-      <img src="images3.jpg">
-      <p>Studio interior</p>
-      <img src="images4.jpg">
-
-      <h3>Follow Us</h3>
-      <p>Instagram | TikTok | Facebook</p>
-      <img src="images/socialicons.jpg">
+    <footer>
+        <p>Sunninghill, Sandton, South Africa</p>
+    </footer>
 
 </body>
 </html>
