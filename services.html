@@ -1,45 +1,273 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Services | The Glow Republic</title>
+    <title>Services | The Glow Republic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .menu-list {
+            background-color: white;
+            border-radius: 15px;
+            padding: 5px 20px;
+            margin: 15px 0 25px;
+            border: 1px solid #e8e0d5;
+        }
+        
+        .service-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e8e0d5;
+        }
+        
+        .service-row:last-child {
+            border-bottom: none;
+        }
+        
+        .name {
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .service-description {
+            font-size: 0.9rem;
+            color: #8b7a6b;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #faf7f2;
+            border-radius: 10px;
+        }
+        
+        .category-img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 15px auto;
+            display: block;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+        }
+        
+        .category-img:hover {
+            border-color: #d4af37;
+            transform: scale(1.02);
+        }
+        
+        .category {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        /* LOGO IMAGE STYLES */
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .site-logo {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            background-color: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: #8b7a6b;
+            padding: 12px 30px;
+            border: 1px solid #d4af37;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid #e8e0d5;
+            margin-top: 50px;
+        }
+        
+        nav {
+            padding: 20px 0 20px 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e8e0d5;
+        }
+        
+        nav a {
+            color: #8b7a6b;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        nav a:hover {
+            color: #d4af37;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: #4a3b2c;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin: 30px 0 15px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #4a3b2c;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin: 40px 0 15px;
+        }
+        
+        h3 {
+            text-align: center;
+            font-size: 1rem;
+            color: #8b7a6b;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 30px 0 15px;
+        }
+        
+        p {
+            color: #8b7a6b;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .service-row {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+            .category-img {
+                max-width: 100%;
+                height: 180px;
+            }
+            nav a {
+                margin-right: 15px;
+                font-size: 0.7rem;
+            }
+            .site-logo {
+                max-width: 90px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-      <p>
-        <a href="index.html">HOME</a> | 
-        <a href="about.html">ABOUT</a> | 
-        <a href="services.html">SERVICES</a> | 
-        <a href="testimonials.html">TESTIMONIALS</a> |
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
         <a href="contact.html">CONTACT</a>
-      </p>
-      <img src="images/logo.jpg">
+    </nav>
 
-      <h1>Our Services</h1>
+    <!-- IMAGE LOGO -->
+    <div class="logo-container">
+        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+    </div>
 
-      <h2>Facial Treatments</h2>
-      <p>Deep Cleansing Facial - R500</p>
-      <p>Algae Peel - R950</p>
-      <p>The Quick Dew (Hydrating mask) - 30 min - R350</p>
-      <img src="images/facialservice.jpg">
+    <h1>Our Complete Service Menu</h1>
+    <p>At The Glow Republic, every treatment is performed with precision, care, and attention to detail. Below you'll find our full range of services along with prices and important information to help you choose what's right for you.</p>
+    <p><strong>Note:</strong> All prices are inclusive of VAT. A patch test is required for first-time clients. Please arrive 5 minutes before your appointment to complete a brief consultation form.</p>
 
-      <h2>Lash Services</h2>
-      <p>Classic Lash Extensions - R450</p>
-      <p>Volume Lash Extensions - R700</p>
-      <p>Hybrid Lash Extensions - R650</p>
-      <p>Lash Infill - R350</p>
-      <img src="images/lashtservice.jpg">
+    <!-- FACIAL TREATMENTS SECTION -->
+    <div class="category">
+        <h2>Facial Treatments</h2>
+        <img src="images/facial-category.jpg" alt="Facial treatment at The Glow Republic" class="category-img">
+        <p>Our facials are customized to your skin's unique needs. Each treatment includes a thorough skin analysis, double cleansing, targeted serums, mask, and a relaxing facial massage. We use only professional-grade, cruelty-free products that deliver visible results without irritation.</p>
+    </div>
+    <div class="menu-list">
+        <div class="service-row"><span class="name">The Quick Dew (Hydrating Express)</span><span>30 min - R350</span></div>
+        <div class="service-row"><span class="name">The Pollution Purge (Deep Clean + Extractions)</span><span>60 min - R650</span></div>
+        <div class="service-row"><span class="name">Algae Peel (Brightening + Natural Peel)</span><span>50 min - R600</span></div>
+        <div class="service-row"><span class="name">Chemical Peel (Sensitive Skin + Barrier Repair)</span><span>60 min - R700</span></div>
+        <div class="service-row"><span class="name">Anti-Aging Collagen Facial</span><span>60 min - R750</span></div>
+    </div>
+    <div class="service-description">
+        <strong>✨ Add-on options (any facial):</strong> Collagen eye mask (+R80) | LED light therapy (10 min, +R120) | Gua sha lymphatic drainage (+R100) | Chemical peel upgrade (+R200)
+    </div>
 
-      <h2>Brow Services</h2>
-      <p>Sword Ombré - R1500</p>
-      <p>Microblading - R1550</p>
-      <img src="images/browservice.jpg">
+    <!-- LASH SERVICES SECTION -->
+    <div class="category">
+        <h2>Lash Services</h2>
+        <img src="images/lashes-category.jpg" alt="Lash extensions set at The Glow Republic" class="category-img">
+        <p>Whether you want dramatic volume or a natural everyday look, our lash artists will create a set that flatters your eye shape and suits your lifestyle. All lash extensions are applied with medical-grade adhesive and premium synthetic mink lashes that are lightweight and long-lasting.</p>
+    </div>
+    <div class="menu-list">
+        <div class="service-row"><span class="name">Classic Lash Set (100-120 lashes/eye)</span><span>90 min - R650</span></div>
+        <div class="service-row"><span class="name">Hybrid Lash Set (mix of classic + volume)</span><span>105 min - R750</span></div>
+        <div class="service-row"><span class="name">Volume Lash Set (lightweight fans)</span><span>120 min - R850</span></div>
+        <div class="service-row"><span class="name">Mega Volume Lash Set (maximum drama)</span><span>150 min - R1050</span></div>
+        <div class="service-row"><span class="name">Lash Lift + Tint (no extensions, curled look)</span><span>60 min - R550</span></div>
+        <div class="service-row"><span class="name">Lash Infill (2-4 weeks after full set)</span><span>45-60 min - R350</span></div>
+    </div>
+    <div class="service-description">
+        <strong>💡 Lash aftercare tip:</strong> Avoid water, steam, and oil-based products for 24-48 hours after application. Brush daily with provided spoolie. With proper care, your lashes will last 2-4 weeks before needing an infill.
+    </div>
 
-      <h3>Book Now</h3>
-      <p>Call or WhatsApp us to book your appointment.</p>
-      <p>Walk-ins welcome but appointments are recommended.</p>
-      <p>Same day bookings available if we have space.</p>
-      <p>Ask us about package deals for multiple services.</p>
-      <img src="images/booknow.jpg">
+    <!-- BROW SERVICES SECTION -->
+    <div class="category">
+        <h2>Brow Services</h2>
+        <img src="images/brows-category.jpg" alt="Brow shaping and lamination at The Glow Republic" class="category-img">
+        <p>Your brows are the frame of your face, and we treat them with the precision they deserve. Our brow artists use a combination of techniques to create symmetry, definition, and a shape that enhances your natural features.</p>
+    </div>
+    <div class="menu-list">
+        <div class="service-row"><span class="name">Brow Wax and Shape</span><span>20 min - R180</span></div>
+        <div class="service-row"><span class="name">Brow Threading (precise, gentle on skin)</span><span>15 min - R150</span></div>
+        <div class="service-row"><span class="name">Brow Lamination (smooths and lifts brow hair)</span><span>45 min - R450</span></div>
+        <div class="service-row"><span class="name">Brow Tint (semi-permanent color)</span><span>15 min - R120</span></div>
+        <div class="service-row"><span class="name">Lamination + Tint + Shape (complete brow makeover)</span><span>60 min - R550</span></div>
+        <div class="service-row"><span class="name">Sword Ombré Brows (semi-permanent tattooing)</span><span>2 hours - R1800</span></div>
+        <div class="service-row"><span class="name">Microblading (hair-stroke tattooing)</span><span>2.5 hours - R2200</span></div>
+    </div>
+    <div class="service-description">
+        <strong>📋 Important:</strong> A consultation is required for all semi-permanent brow services (microblading, powder brows). We'll discuss your desired shape, color, and aftercare. A patch test must be completed 48 hours prior to your appointment.
+    </div>
+
+    <!-- PACKAGES SECTION -->
+    <h2>Packages & Memberships</h2>
+    <p>Save on your regular treatments with our value packages. Perfect for maintaining your brows, lashes, or facial routine throughout the year.</p>
+    <div class="menu-list">
+        <div class="service-row"><span class="name">Brow Maintenance Plan (3 wax + 3 tint)</span><span>R800 (save R100)</span></div>
+        <div class="service-row"><span class="name">Lash Lover Package (full set + 2 infills)</span><span>R1150 (save R150)</span></div>
+        <div class="service-row"><span class="name">Facial Membership (4 facials of your choice)</span><span>Pay for 3, get 4th free</span></div>
+        <div class="service-row"><span class="name">The Full Glow (brow lamination + lash lift + facial)</span><span>R1350 (save R200)</span></div>
+    </div>
+
+    <h3>Before Your First Visit</h3>
+    <p><strong>Patch testing:</strong> Required for all first-time lash lift, tint, and semi-permanent brow clients. This is a quick, painless test to ensure you have no allergic reaction. Please schedule your patch test at least 48 hours before your treatment.</p>
+    <p><strong>Consultation:</strong> Every new client receives a complimentary 5-10 minute consultation before their first treatment. We'll discuss your goals, assess your natural features, and recommend the best approach.</p>
+    <p><strong>What to bring:</strong> Please come with clean skin (no makeup on the treatment area). If you're having lash extensions, avoid wearing mascara or eyeliner to your appointment.</p>
+
+    <p style="text-align: center; margin-top: 35px;">
+        <a href="contact.html" class="btn">READY TO BOOK? CONTACT US →</a>
+    </p>
+
+    <footer>
+        <p>Sunninghill, Sandton, South Africa</p>
+    </footer>
 
 </body>
 </html>
