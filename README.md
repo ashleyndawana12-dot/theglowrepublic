@@ -1,6 +1,4 @@
-<img width="1312" height="709" alt="Screenshot 2026-06-04 033654" src="https://github.com/user-attachments/assets/d16c5722-12dc-4156-b35f-a47d8bb34fc9" /># theglowrepublic
 Project Overview
-
 This project involves the development of a comprehensive website for The Glow Republic, a newly established beauty business based in Pretoria, South Africa. The business was founded by Ashley Ndawana as part of a growing passion for the beauty and skincare industry, with the aim of offering professional and affordable beauty services in a warm and elegant environment.
 
 The website will serve as the digital presence of The Glow Republic, allowing potential clients to learn more about the business, explore available services, and engage with the brand online. As the business is currently in its startup phase, the website plays a key role in establishing brand identity, visibility, and credibility within the beauty industry.
