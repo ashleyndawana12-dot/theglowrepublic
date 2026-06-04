@@ -106,3 +106,33 @@ Soft colour palettes, elegant typography, and minimalistic design will reflect t
 
 Technical Implementation
 Through the use of GitHub and VS Code, the website utilises modern web technologies, including HTML5 for semantic structure, CSS for visual styling and responsive design, and JavaScript for interactive functionality. The responsive framework ensures compatibility across all devices and screen sizes.
+
+Technical Implementation
+
+The website will be developed using standard web technologies including:
+
+HTML5 for structure
+CSS3 for styling and layout
+JavaScript for interactivity and form handling
+
+The design will prioritise mobile-first responsiveness and smooth user experience, ensuring accessibility across all devices.
+
+Content Strategy
+
+All content will be created to reflect The Glow Republic’s identity as a soft, elegant, and results-driven beauty brand. The tone will be professional yet calming, focusing on confidence, natural beauty, and client comfort. Visual content will be carefully selected to align with the brand aesthetic.
+
+Project Structure Overview
+
+The website will be structured into clearly defined sections that work together to create a seamless user experience:
+
+Introduction to the brand
+Explanation of services
+Visual portfolio of work
+Client communication tools
+Appointment booking functionality
+Key Achievements Expected
+Strong and consistent brand identity online
+Improved client accessibility to services and bookings
+Professional presentation of beauty treatments
+Increased customer engagement and trust
+A fully functional and visually appealing website tailored to the beauty industry
