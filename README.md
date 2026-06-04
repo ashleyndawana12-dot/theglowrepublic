@@ -180,3 +180,25 @@ The screenshots below show how the site responds on common devices after testing
 <img width="1318" height="718" alt="Screenshot 2026-06-04 032456" src="https://github.com/user-attachments/assets/57c1aa28-0208-442f-9439-914200f91d1d" />
 <img width="1312" height="709" alt="Screenshot 2026-06-04 033654" src="https://github.com/user-attachments/assets/88cd6780-3e8b-4bc2-aeef-e47d3efb7d05" />
 
+## References
+
+Canva. 2026. *Logo design inspiration*. Available at: https://www.canva.com [Accessed 28 May 2026].
+
+Coolors. 2026. *Color palette generator: Blush pink and soft gold theme*. Available at: https://coolors.co [Accessed 28 May 2026].
+
+GitHub. 2025. *GitHub Desktop and GitHub Pages*. Available at: https://github.com [Accessed 29 May 2026].
+
+Google Fonts. 2026. *Brush Script MT and Segoe UI font family*. Available at: https://fonts.google.com [Accessed 28 May 2026].
+
+MDN Web Docs. 2026. *Mozilla Developer Network: CSS documentation*. Available at: https://developer.mozilla.org [Accessed 28 May 2026].
+
+Microsoft Corporation. 2026. *Visual Studio Code*. Available at: https://code.visualstudio.com [Accessed 28 May 2026].
+
+Pexels. 2026. *Free stock photos*. Available at: https://www.pexels.com [Accessed 28 May 2026].
+
+The Independent Institute of Education (IIE). 2025. *IIE Harvard Anglia Style Reference Guide 2025: Quick Reference Guide*. Johannesburg: The Independent Institute of Education.
+
+Unsplash. 2026. *Beautiful free images*. Available at: https://unsplash.com [Accessed 28 May 2026].
+
+W3Schools. 2026. *HTML and CSS tutorials*. Available at: https://www.w3schools.com [Accessed 1 June 2026].
+
