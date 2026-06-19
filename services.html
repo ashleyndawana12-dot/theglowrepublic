@@ -4,6 +4,9 @@
     <title>Services | The Glow Republic</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        /* ============================================
+           ORIGINAL STYLES (KEPT FROM YOUR CODE)
+           ============================================ */
         .menu-list {
             background-color: white;
             border-radius: 15px;
@@ -152,6 +155,129 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /* ============================================
+           DYNAMIC SERVICES STYLES (NEW)
+           ============================================ */
+        .dynamic-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        #search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            border: 2px solid #e8e0d5;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        #search-input:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        
+        .filter-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #e8e0d5;
+            border-radius: 25px;
+            background: white;
+            color: #4a3b2c;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+        
+        .filter-btn:hover {
+            border-color: #d4af37;
+            transform: translateY(-2px);
+        }
+        
+        .filter-btn.active {
+            background: #d4af37;
+            color: white;
+            border-color: #d4af37;
+        }
+        
+        .sort-container {
+            text-align: right;
+            margin: 15px 0;
+        }
+        
+        .sort-container select {
+            padding: 8px 15px;
+            border: 2px solid #e8e0d5;
+            border-radius: 8px;
+            background: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .sort-container select:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        
+        #dynamic-services .service-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid #e8e0d5;
+            transition: background-color 0.3s ease;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        #dynamic-services .service-row:nth-child(even) {
+            background-color: #faf7f2;
+        }
+        
+        #dynamic-services .service-row:hover {
+            background-color: #f5ede5;
+        }
+        
+        #dynamic-services .service-row .name {
+            font-weight: bold;
+            color: #d4af37;
+            min-width: 180px;
+        }
+        
+        #dynamic-services .service-row .description {
+            color: #5a4a3a;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        #dynamic-services .service-row .duration {
+            color: #8b7a6b;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        #dynamic-services .service-row .price {
+            font-weight: bold;
+            color: #4a3b2c;
+            min-width: 70px;
+            text-align: right;
+        }
         
         @media (max-width: 768px) {
             .service-row {
@@ -170,11 +296,35 @@
             .site-logo {
                 max-width: 90px;
             }
+            
+            #dynamic-services .service-row {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+            #dynamic-services .service-row .name,
+            #dynamic-services .service-row .description,
+            #dynamic-services .service-row .duration,
+            #dynamic-services .service-row .price {
+                min-width: auto;
+                text-align: center;
+            }
+            .filter-container {
+                gap: 8px;
+            }
+            .filter-btn {
+                padding: 6px 14px;
+                font-size: 0.75rem;
+            }
+            .sort-container {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- ORIGINAL NAVIGATION (KEPT) -->
     <nav>
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
@@ -183,70 +333,49 @@
         <a href="contact.html">CONTACT</a>
     </nav>
 
-    <!-- IMAGE LOGO -->
+    <!-- ORIGINAL LOGO (KEPT) -->
     <div class="logo-container">
-        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+        <img src="images/correct logo.png" alt="The Glow Republic Logo" class="site-logo">
     </div>
 
+    <!-- ORIGINAL HEADING (KEPT) -->
     <h1>Our Complete Service Menu</h1>
     <p>At The Glow Republic, every treatment is performed with precision, care, and attention to detail. Below you'll find our full range of services along with prices and important information to help you choose what's right for you.</p>
     <p><strong>Note:</strong> All prices are inclusive of VAT. A patch test is required for first-time clients. Please arrive 5 minutes before your appointment to complete a brief consultation form.</p>
 
-    <!-- FACIAL TREATMENTS SECTION -->
-    <div class="category">
-        <h2>Facial Treatments</h2>
-        <img src="images/facial-category.jpg" alt="Facial treatment at The Glow Republic" class="category-img">
-        <p>Our facials are customized to your skin's unique needs. Each treatment includes a thorough skin analysis, double cleansing, targeted serums, mask, and a relaxing facial massage. We use only professional-grade, cruelty-free products that deliver visible results without irritation.</p>
-    </div>
-    <div class="menu-list">
-        <div class="service-row"><span class="name">The Quick Dew (Hydrating Express)</span><span>30 min - R350</span></div>
-        <div class="service-row"><span class="name">The Pollution Purge (Deep Clean + Extractions)</span><span>60 min - R650</span></div>
-        <div class="service-row"><span class="name">Algae Peel (Brightening + Natural Peel)</span><span>50 min - R600</span></div>
-        <div class="service-row"><span class="name">Chemical Peel (Sensitive Skin + Barrier Repair)</span><span>60 min - R700</span></div>
-        <div class="service-row"><span class="name">Anti-Aging Collagen Facial</span><span>60 min - R750</span></div>
-    </div>
-    <div class="service-description">
-        <strong>✨ Add-on options (any facial):</strong> Collagen eye mask (+R80) | LED light therapy (10 min, +R120) | Gua sha lymphatic drainage (+R100) | Chemical peel upgrade (+R200)
-    </div>
-
-    <!-- LASH SERVICES SECTION -->
-    <div class="category">
-        <h2>Lash Services</h2>
-        <img src="images/lashes-category.jpg" alt="Lash extensions set at The Glow Republic" class="category-img">
-        <p>Whether you want dramatic volume or a natural everyday look, our lash artists will create a set that flatters your eye shape and suits your lifestyle. All lash extensions are applied with medical-grade adhesive and premium synthetic mink lashes that are lightweight and long-lasting.</p>
-    </div>
-    <div class="menu-list">
-        <div class="service-row"><span class="name">Classic Lash Set (100-120 lashes/eye)</span><span>90 min - R650</span></div>
-        <div class="service-row"><span class="name">Hybrid Lash Set (mix of classic + volume)</span><span>105 min - R750</span></div>
-        <div class="service-row"><span class="name">Volume Lash Set (lightweight fans)</span><span>120 min - R850</span></div>
-        <div class="service-row"><span class="name">Mega Volume Lash Set (maximum drama)</span><span>150 min - R1050</span></div>
-        <div class="service-row"><span class="name">Lash Lift + Tint (no extensions, curled look)</span><span>60 min - R550</span></div>
-        <div class="service-row"><span class="name">Lash Infill (2-4 weeks after full set)</span><span>45-60 min - R350</span></div>
-    </div>
-    <div class="service-description">
-        <strong>💡 Lash aftercare tip:</strong> Avoid water, steam, and oil-based products for 24-48 hours after application. Brush daily with provided spoolie. With proper care, your lashes will last 2-4 weeks before needing an infill.
+    <!-- ============================================
+         DYNAMIC SERVICES (NEW - Search, Filter, Sort)
+         ============================================ -->
+    <div class="dynamic-section">
+        <h2>Browse Our Services</h2>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="🔍 Search services..." onkeyup="searchServices()">
+        </div>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all" onclick="filterByCategory('all')">All</button>
+            <button class="filter-btn" data-category="facial" onclick="filterByCategory('facial')">Facials</button>
+            <button class="filter-btn" data-category="lash" onclick="filterByCategory('lash')">Lashes</button>
+            <button class="filter-btn" data-category="brow" onclick="filterByCategory('brow')">Brows</button>
+        </div>
+        
+        <!-- Sort Dropdown -->
+        <div class="sort-container">
+            <label for="sort-select">Sort by price:</label>
+            <select id="sort-select" onchange="sortByPrice(this.value)">
+                <option value="low-to-high">Low to High</option>
+                <option value="high-to-low">High to Low</option>
+            </select>
+        </div>
+        
+        <!-- Dynamic Services Container -->
+        <div id="dynamic-services"></div>
     </div>
 
-    <!-- BROW SERVICES SECTION -->
-    <div class="category">
-        <h2>Brow Services</h2>
-        <img src="images/brows-category.jpg" alt="Brow shaping and lamination at The Glow Republic" class="category-img">
-        <p>Your brows are the frame of your face, and we treat them with the precision they deserve. Our brow artists use a combination of techniques to create symmetry, definition, and a shape that enhances your natural features.</p>
-    </div>
-    <div class="menu-list">
-        <div class="service-row"><span class="name">Brow Wax and Shape</span><span>20 min - R180</span></div>
-        <div class="service-row"><span class="name">Brow Threading (precise, gentle on skin)</span><span>15 min - R150</span></div>
-        <div class="service-row"><span class="name">Brow Lamination (smooths and lifts brow hair)</span><span>45 min - R450</span></div>
-        <div class="service-row"><span class="name">Brow Tint (semi-permanent color)</span><span>15 min - R120</span></div>
-        <div class="service-row"><span class="name">Lamination + Tint + Shape (complete brow makeover)</span><span>60 min - R550</span></div>
-        <div class="service-row"><span class="name">Sword Ombré Brows (semi-permanent tattooing)</span><span>2 hours - R1800</span></div>
-        <div class="service-row"><span class="name">Microblading (hair-stroke tattooing)</span><span>2.5 hours - R2200</span></div>
-    </div>
-    <div class="service-description">
-        <strong>📋 Important:</strong> A consultation is required for all semi-permanent brow services (microblading, powder brows). We'll discuss your desired shape, color, and aftercare. A patch test must be completed 48 hours prior to your appointment.
-    </div>
-
-    <!-- PACKAGES SECTION -->
+    <!-- ORIGINAL PACKAGES SECTION (KEPT) -->
     <h2>Packages & Memberships</h2>
     <p>Save on your regular treatments with our value packages. Perfect for maintaining your brows, lashes, or facial routine throughout the year.</p>
     <div class="menu-list">
@@ -268,6 +397,9 @@
     <footer>
         <p>Sunninghill, Sandton, South Africa</p>
     </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="javascript/services.js"></script>
 
 </body>
 </html>
