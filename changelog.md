@@ -61,3 +61,96 @@ Planned for part 3
 - JavaScript form validation
 - Image gallery lightbox
 - Mobile menu toggle
+
+ [Part 2 Feedback Corrections] - June 2025
+
+ Issues Fixed Based on Lecturer Feedback
+
+. External CSS (Fixed)
+- Created `css/style.css` file and uploaded to GitHub
+- Added `<link rel="stylesheet" href="css/style.css">` to ALL 5 HTML pages:
+  - index.html
+  - about.html
+  - services.html
+  - testimonials.html
+  - contact.html
+- Verified CSS is correctly linked and applied to all pages
+
+2. Default/Base Styles (Added)
+- Added reset styles: `* { margin: 0; padding: 0; box-sizing: border-box; }`
+- Added body styles: font-family (Segoe UI), font-size (16px), line-height (1.6), background-color (#faf7f2)
+- Added anchor styles: text-decoration: none, color: inherit
+- Added image styles: max-width: 100%, height: auto, display: block
+- Added list styles: list-style: none for ul and ol
+
+3. Typography Styles (Enhanced)
+- Added font-weight: h1 (300), h2 (400), h3 (500)
+- Added letter-spacing: h1 (4px), h2 (2px), h3 (1px)
+- Added line-height: 1.8 for paragraphs
+- Added cursive fonts (Brush Script MT) for `.cursive-title` and `.cursive-main`
+- Added font-size variations for all heading levels
+
+4. Layout Structure (Added)
+- Added Flexbox for navigation (display: flex, justify-content: flex-start)
+- Added Flexbox for services row (3 columns)
+- Added Flexbox for team grid (3 columns)
+- Added Flexbox for features grid (4 columns)
+- Added Flexbox for contact cards (2 columns)
+- Added Grid for testimonials/review cards (3 columns on desktop, 1 on mobile)
+- Added `.container` class with max-width: 1200px for consistent layout
+
+5. Decoration & Colour (Added)
+- Added CSS variables (`:root`) for consistent colours:
+  - `--gold: #d4af37`
+  - `--gold-light: #e8c9a0`
+  - `--pink: #e8c9c0`
+  - `--beige: #faf7f2`
+  - `--white: #ffffff`
+  - `--dark: #4a3b2c`
+  - `--text: #5a4a3a`
+  - `--border: #e8e0d5`
+- Added box-shadow to all cards and buttons
+- Added border-radius (12px for cards, 30px for buttons)
+- Added gold accent colour (#d4af37) for branding
+- Added gradient and shadow effects on hover
+
+6. Pseudo-classes (Added)
+- Added `:hover` for:
+  - Navigation links (gold colour + underline)
+  - Buttons (gold background, scale, shadow)
+  - Cards (lift up, gold border, shadow)
+  - Gallery items (lift up, gold border)
+  - Service rows (background colour change)
+  - Visit block (gold border, background change)
+- Added `:focus` for:
+  - Input fields (gold border + glow shadow)
+  - Select dropdowns (gold border + glow shadow)
+  - Textareas (gold border + glow shadow)
+- Added `:active` for:
+  - Buttons (scale down effect)
+  - Submit buttons (scale down effect)
+- Added `:first-child` for service rows (top gold border)
+- Added `:last-child` for service rows (no bottom border)
+- Added `:nth-child(even)` for alternating row colours
+
+7. Responsive Design (Added)
+- Added media query for tablet (max-width: 1024px)
+  - Changed review cards from 3 to 2 columns
+  - Adjusted gallery image sizes
+- Added media query for mobile (max-width: 768px)
+  - Changed all columns to single column
+  - Adjusted font sizes for readability
+  - Made navigation wrap
+  - Reduced logo size
+- Added media query for small mobile (max-width: 480px)
+  - Further reduced font sizes
+  - Adjusted button sizes for touch targets
+    
+8. Images Added
+- Uploaded team photos:
+  - Ashley Ndawana (Senior Brow Artist)
+  - Natasha Lenonyane (Lead Facial Therapist)
+  - Priya Singh (Lash Extension Artist)
+  - Team photo
+
+9. File Structure Updated
