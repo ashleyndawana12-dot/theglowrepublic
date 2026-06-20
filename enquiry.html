@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry | The Glow Republic</title>
+    <meta name="description" content="Enquire about brow lamination, lash extensions, facials and other beauty services at The Glow Republic in Sunninghill, Sandton.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .enquiry-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        .enquiry-card {
+            background: white;
+            padding: 40px;
+            border: 1px solid #e8e0d5;
+            transition: all 0.3s ease;
+        }
+        
+        .enquiry-card:hover {
+            border-color: #d4af37;
+        }
+        
+        .enquiry-card h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .enquiry-card p {
+            text-align: center;
+            color: #8b7a6b;
+            margin-bottom: 30px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #e8e0d5;
+            border-radius: 0;
+            background-color: white;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        
+        .submit-btn {
+            background-color: transparent;
+            color: #8b7a6b;
+            padding: 12px 25px;
+            border: 1px solid #d4af37;
+            border-radius: 0;
+            cursor: pointer;
+            font-weight: 400;
+            letter-spacing: 2px;
+            width: 100%;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .required {
+            color: #d4af37;
+        }
+        
+        .form-note {
+            font-size: 0.8rem;
+            color: #8b7a6b;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .site-logo {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            background-color: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid #e8e0d5;
+            margin-top: 50px;
+        }
+        
+        nav {
+            padding: 20px 0 20px 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e8e0d5;
+        }
+        
+        nav a {
+            color: #8b7a6b;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        nav a:hover {
+            color: #d4af37;
+        }
+        
+        @media (max-width: 768px) {
+            .enquiry-card {
+                padding: 20px;
+            }
+            nav a {
+                margin-right: 15px;
+                font-size: 0.7rem;
+            }
+            .site-logo {
+                max-width: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="enquiry.html">ENQUIRY</a>
+    </nav>
+
+    <div class="logo-container">
+        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+    </div>
+
+    <div class="enquiry-container">
+        <div class="enquiry-card">
+            <h1>Service Enquiry</h1>
+            <p>Interested in our brow, lash, or facial treatments? Fill out the form below and we'll get back to you within 4 hours with availability and pricing.</p>
+            
+            <form action="#" method="POST" id="enquiryForm">
+                <!-- Name -->
+                <label for="enquiry-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="enquiry-name" name="name" placeholder="Your full name" required>
+                
+                <!-- Phone -->
+                <label for="enquiry-phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="enquiry-phone" name="phone" placeholder="+27 81 234 5678" required>
+                
+                <!-- Email -->
+                <label for="enquiry-email">Email Address</label>
+                <input type="email" id="enquiry-email" name="email" placeholder="your@email.com">
+                
+                <!-- Service Selection -->
+                <label for="enquiry-service">Service Interested In <span class="required">*</span></label>
+                <select id="enquiry-service" name="service" required>
+                    <option value="">Select a service...</option>
+                    <option value="brow-shaping">Brow Shaping</option>
+                    <option value="brow-lamination">Brow Lamination</option>
+                    <option value="brow-tint">Brow Tint</option>
+                    <option value="sword-ombre">Sword Ombré Brows</option>
+                    <option value="microblading">Microblading</option>
+                    <option value="classic-lashes">Classic Lash Extensions</option>
+                    <option value="volume-lashes">Volume Lash Extensions</option>
+                    <option value="lash-lift">Lash Lift + Tint</option>
+                    <option value="hydrating-facial">Hydrating Facial</option>
+                    <option value="deep-clean-facial">Deep Clean Facial</option>
+                    <option value="algae-peel">Algae Peel</option>
+                    <option value="chemical-peel">Chemical Peel</option>
+                    <option value="package">Package / Membership</option>
+                    <option value="not-sure">Not sure - consultation needed</option>
+                </select>
+                
+                <!-- Preferred Date -->
+                <label for="enquiry-date">Preferred Date</label>
+                <input type="date" id="enquiry-date" name="preferred-date">
+                
+                <!-- Preferred Time -->
+                <label for="enquiry-time">Preferred Time</label>
+                <input type="time" id="enquiry-time" name="preferred-time">
+                
+                <!-- Questions -->
+                <label for="enquiry-message">Questions or Special Requests</label>
+                <textarea id="enquiry-message" name="message" rows="5" placeholder="Do you have any questions about pricing, availability, or aftercare? Let us know..."></textarea>
+                
+                <!-- How did you hear about us? -->
+                <label for="enquiry-hear">How did you hear about us?</label>
+                <select id="enquiry-hear" name="hear-about">
+                    <option value="">Select an option...</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="tiktok">TikTok</option>
+                    <option value="google">Google Search</option>
+                    <option value="word-of-mouth">Word of Mouth</option>
+                    <option value="walk-in">Walk-in</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">SUBMIT ENQUIRY →</button>
+            </form>
+            
+            <p class="form-note">* Required fields. All information is kept confidential.</p>
+            <p class="form-note">📋 We will respond within 4 business hours with pricing and availability.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Sunninghill, Sandton, South Africa</p>
+    </footer>
+
+</body>
+</html>
