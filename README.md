@@ -240,3 +240,29 @@ File Security
 - Add CAPTCHA to contact form to prevent spam
 - Implement rate limiting on form submissions
 - Regular updates to all dependencies
+  
+
+Page Speed Optimisation
+
+To improve the loading speed of The Glow Republic website, I have implemented the following:
+
+ Image Optimisation
+- Images will be compressed using TinyPNG before uploading
+- Images are saved in appropriate formats (JPG for photos, PNG for logos)
+- Image dimensions are optimised for web display
+
+CSS Optimisation
+- External CSS is used (cached by browsers)
+- CSS file is minified (removed unnecessary spaces)
+- Combined CSS rules to reduce file size
+
+ HTML Optimisation
+- Clean, semantic HTML structure
+- External CSS and JavaScript to reduce page load
+
+ Performance Checklist
+- [ ] Images compressed (< 200KB each)
+- [ ] CSS file minified
+- [ ] Proper image formats used
+- [ ] No unnecessary large files
+- [ ] Mobile-friendly responsive design
