@@ -1,0 +1,12 @@
+# Robots.txt for The Glow Republic
+# Allow all search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private pages (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://ashleyndawana12-dot.github.io/theglowrepublic/sitemap.xml

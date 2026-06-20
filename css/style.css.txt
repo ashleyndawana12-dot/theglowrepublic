@@ -589,3 +589,197 @@ footer {
         width: 220px;
     }
 }
+/* ============================================
+   BIGGER IMAGES - FIX
+   ============================================ */
+
+/* Category images (Services page) */
+.category-img {
+    width: 100%;
+    max-width: 450px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px auto;
+    display: block;
+    border: 1px solid #e8e0d5;
+    transition: all 0.3s ease;
+}
+
+.category-img:hover {
+    border-color: #d4af37;
+    transform: scale(1.02);
+}
+
+/* Feature images (About page) */
+.feature-img {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e0d5;
+    transition: all 0.3s ease;
+}
+
+.feature-img:hover {
+    border-color: #d4af37;
+    transform: scale(1.02);
+}
+
+/* Team images (About page) */
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #d4af37;
+}
+
+/* Service images (Home page) */
+.service-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Logo */
+.site-logo {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .site-logo {
+        max-width: 150px;
+    }
+    
+    .team-member img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .category-img {
+        max-width: 100%;
+        height: 200px;
+    }
+    
+    .feature-img {
+        max-width: 100%;
+        height: 150px;
+    }
+    
+    .service-item img {
+        max-width: 100%;
+    }
+}
+/* ============================================
+   BIGGER IMAGES FIX
+   ============================================ */
+
+/* 1. BIGGER LOGO - applies to ALL pages */
+.site-logo {
+    max-width: 200px !important;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* 2. BIGGER TEAM PHOTOS - About page */
+.team-member img {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #d4af37;
+}
+
+/* 3. BIGGER FACIAL TREATMENT PHOTO - Services page */
+.category-img {
+    max-width: 500px !important;
+    width: 100%;
+    height: 300px !important;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px auto;
+    display: block;
+    border: 1px solid #e8e0d5;
+    transition: all 0.3s ease;
+}
+
+.category-img:hover {
+    border-color: #d4af37;
+    transform: scale(1.02);
+}
+
+/* 4. BIGGER FEATURE IMAGES - About page */
+.feature-img {
+    max-width: 280px !important;
+    width: 100%;
+    height: 200px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e0d5;
+    transition: all 0.3s ease;
+}
+
+.feature-img:hover {
+    border-color: #d4af37;
+    transform: scale(1.02);
+}
+
+/* 5. BIGGER HOME PAGE SERVICE IMAGES */
+.service-item img {
+    max-width: 350px !important;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 6. BIGGER GALLERY IMAGES */
+.gallery-item img {
+    height: 300px !important;
+    object-fit: cover;
+}
+
+/* MOBILE RESPONSIVE - smaller on phones */
+@media (max-width: 768px) {
+    .site-logo {
+        max-width: 150px !important;
+    }
+    
+    .team-member img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    .category-img {
+        max-width: 100% !important;
+        height: 220px !important;
+    }
+    
+    .feature-img {
+        max-width: 100% !important;
+        height: 160px !important;
+    }
+    
+    .service-item img {
+        max-width: 100% !important;
+    }
+    
+    .gallery-item img {
+        height: 220px !important;
+    }
+}
