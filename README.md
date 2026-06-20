@@ -202,3 +202,22 @@ Unsplash. 2026. *Beautiful free images*. Available at: https://unsplash.com [Acc
 
 W3Schools. 2026. *HTML and CSS tutorials*. Available at: https://www.w3schools.com [Accessed 1 June 2026].
 
+ Off-Page SEO
+
+ Backlinks Strategy
+- Google My Business listing with website link
+- Social media profiles linking to website
+- Local beauty directory listings
+- Potential influencer collaborations
+
+Social Media Promotion
+- Instagram: @theglowrepublic
+- TikTok: @glowrepublic_sa
+- Facebook: The Glow Republic
+- Regular posting with website links
+
+Local SEO
+- Keywords: "Sunninghill", "Sandton", "brow lamination Sandton"
+- Google My Business profile with address
+- Full address on Contact page
+- Local business directory listings
