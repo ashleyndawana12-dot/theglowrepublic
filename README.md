@@ -14,6 +14,51 @@ The website is designed for women and men aged 20–59 who appreciate gentle bea
 
 Soft, natural-looking beauty results
 Skincare and facial treatments
+
+*The Glow Republic - Aesthetic Studio Website*
+
+ *Project Overview*
+* Business name: The Glow Republic
+* Location: Sunninghill, Sandton
+* Established: 2025
+* Services: Brow treatments, Lash extensions, Facial treatments
+
+ *Pages Included*
+* Home (index.html)
+* About (about.html)
+* Services (services.html)
+* Testimonials (testimonials.html)
+* Contact (contact.html)
+* Enquiry (enquiry.html)
+
+ *Technologies Used*
+* HTML5
+* CSS3 (External, Internal, Inline)
+* JavaScript (Dynamic content, search, filter, sort, form validation)
+* Git & GitHub (Version control)
+
+ *CSS Implementation*
+* External CSS: style.css for global styles
+* Internal CSS: Page-specific styles in `<style>` tags
+* Inline CSS: Specific element styling
+
+ *Features*
+* Responsive design with media queries
+* Horizontal scrolling gallery
+* Dynamic services with search, filter, and sort
+* Contact form with validation
+* Service enquiry form with validation
+* SEO optimisation with meta tags and descriptions
+* robots.txt and sitemap.xml
+
+ *Colour Palette*
+| Color | Hex Code |
+|-------|----------|
+| Soft Gold | #d4af37 |
+| Blush Pink | #e8c9c0 |
+| Warm Beige | #faf7f2 |
+| White | #ffffff |
+| Dark Brown | #4a3b2c |
 Neat eyelash extensions
 Clean and precise brow work
 A calming and professional beauty experience
