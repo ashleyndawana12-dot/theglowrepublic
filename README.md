@@ -180,7 +180,7 @@ The screenshots below show how the site responds on common devices after testing
 <img width="1318" height="718" alt="Screenshot 2026-06-04 032456" src="https://github.com/user-attachments/assets/57c1aa28-0208-442f-9439-914200f91d1d" />
 <img width="1312" height="709" alt="Screenshot 2026-06-04 033654" src="https://github.com/user-attachments/assets/88cd6780-3e8b-4bc2-aeef-e47d3efb7d05" />
 
-## References
+ References
 
 Canva. 2026. *Logo design inspiration*. Available at: https://www.canva.com [Accessed 28 May 2026].
 
@@ -221,3 +221,22 @@ Local SEO
 - Google My Business profile with address
 - Full address on Contact page
 - Local business directory listings
+
+ Security Measures
+
+ HTTPS
+- Website is hosted on GitHub Pages which provides HTTPS encryption
+- All data transmitted between users and the site is secure
+
+ Form Security
+- Contact form uses basic validation
+- No sensitive data is stored on the server
+
+File Security
+- No sensitive files are exposed
+- `.gitignore` prevents sensitive files from being uploaded
+
+ Future Security Recommendations
+- Add CAPTCHA to contact form to prevent spam
+- Implement rate limiting on form submissions
+- Regular updates to all dependencies
