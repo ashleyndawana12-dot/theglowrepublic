@@ -311,3 +311,22 @@ CSS Optimisation
 - [ ] Proper image formats used
 - [ ] No unnecessary large files
 - [ ] Mobile-friendly responsive design
+
+References
+
+ Tools & Libraries
+- Google Maps API - Interactive map on contact page
+- Font Awesome icons - Used throughout the site
+- Google Fonts - Cursive fonts for headings
+
+Image Sources
+- Pexels (www.pexels.com) - Free stock images
+- Unsplash (www.unsplash.com) - Free stock images
+- Canva (www.canva.com) - Free stock images
+
+ Code References
+- W3Schools - HTML/CSS/JS tutorials
+- MDN Web Docs - JavaScript documentation
+- Leaflet.js - Interactive maps (if used)
+
+
