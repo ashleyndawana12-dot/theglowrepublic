@@ -1,43 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About | The Glow Republic</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The Glow Republic | Brow & Lash Studio in Sunninghill, Sandton</title>
+    <meta name="description" content="Learn about The Glow Republic - your trusted aesthetic studio for brows, lashes, and facials in Sunninghill, Sandton. Established in 2025. Meet our expert team.">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .about-card {
+        .story-card, .philosophy-card {
             background: white;
             padding: 30px;
             text-align: center;
-            border: 1px solid #e8e0d5;
+            border: 1px solid #fde8e3;
             transition: all 0.3s ease;
             margin-bottom: 30px;
+            border-radius: 15px;
         }
-        
-        .about-card:hover {
+        .story-card:hover, .philosophy-card:hover {
             border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
         }
-        
         .cursive-title {
             font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive;
             color: #d4af37;
-            font-size: 2rem;
+            font-size: 2.2rem;
             letter-spacing: 1px;
             margin-bottom: 20px;
             font-weight: normal;
         }
-        
+        .cursive-main {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive;
+            color: #d4af37;
+            font-size: 3.5rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            font-weight: normal;
+        }
         .vision-card, .mission-card {
             background: white;
             padding: 30px;
             text-align: center;
-            border: 1px solid #e8e0d5;
+            border: 1px solid #fde8e3;
             transition: all 0.3s ease;
+            border-radius: 15px;
         }
-        
         .vision-card:hover, .mission-card:hover {
             border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
         }
-        
         .vm-container {
             display: flex;
             gap: 30px;
@@ -45,25 +58,10 @@
             margin: 40px auto;
             flex-wrap: wrap;
         }
-        
         .vm-container > div {
             flex: 1;
             min-width: 250px;
         }
-        
-        .story-card, .philosophy-card {
-            background: white;
-            padding: 30px;
-            text-align: center;
-            border: 1px solid #e8e0d5;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-        
-        .story-card:hover, .philosophy-card:hover {
-            border-color: #d4af37;
-        }
-        
         .team-grid {
             display: flex;
             gap: 30px;
@@ -71,46 +69,43 @@
             flex-wrap: wrap;
             margin: 40px 0;
         }
-        
         .team-member {
             text-align: center;
             flex: 1;
             min-width: 250px;
             background: white;
             padding: 25px;
-            border: 1px solid #e8e0d5;
+            border: 1px solid #fde8e3;
             transition: all 0.3s ease;
+            border-radius: 15px;
         }
-        
         .team-member:hover {
             border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
         }
-        
         .team-member img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 50%;
             margin-bottom: 15px;
+            border: 3px solid #fde8e3;
         }
-        
         .team-member h3 {
             margin-bottom: 5px;
             color: #4a3b2c;
         }
-        
         .team-title {
             color: #d4af37;
             font-weight: 500;
             margin-bottom: 15px;
         }
-        
         .team-bio {
             font-size: 0.9rem;
             color: #8b7a6b;
             line-height: 1.5;
         }
-        
         .features-grid {
             display: flex;
             gap: 30px;
@@ -121,133 +116,119 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
         .feature {
             text-align: center;
             flex: 1;
             min-width: 200px;
             background: white;
             padding: 20px;
-            border: 1px solid #e8e0d5;
+            border: 1px solid #fde8e3;
             transition: all 0.3s ease;
+            border-radius: 15px;
         }
-        
         .feature:hover {
             border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
         }
-        
         .feature-img {
             width: 100%;
-            max-width: 200px;
-            height: 150px;
+            max-width: 220px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
             margin-bottom: 15px;
-            border: 1px solid #e8e0d5;
+            border: 2px solid #fde8e3;
             transition: all 0.3s ease;
         }
-        
         .feature-img:hover {
             border-color: #d4af37;
             transform: scale(1.02);
         }
-        
         .visit-block {
-            background: #faf0e0;
-            padding: 25px;
+            background: #fde8e3;
+            padding: 30px;
             text-align: center;
             border: 1px solid #e8c9a0;
             max-width: 900px;
             margin: 40px auto;
             transition: all 0.3s ease;
+            border-radius: 15px;
         }
-        
         .visit-block:hover {
             border-color: #d4af37;
-            background: #fdf5e8;
+            background: #fde8e3;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
         }
-        
         .visit-block h3 {
             color: #4a3b2c;
             margin-bottom: 15px;
         }
-        
         .visit-block p {
             margin-bottom: 10px;
         }
-        
-        .cursive-main {
-            font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive;
-            color: #d4af37;
-            font-size: 3rem;
-            text-align: center;
-            letter-spacing: 2px;
-            margin: 20px 0;
-            font-weight: normal;
-        }
-        
         .team-intro {
             text-align: center;
             max-width: 700px;
             margin: 20px auto 40px;
             color: #8b7a6b;
         }
-        
-        /* LOGO IMAGE STYLES */
         .logo-container {
             text-align: center;
             margin: 20px 0;
         }
-        
         .site-logo {
-            max-width: 120px;
+            max-width: 200px;
             width: 100%;
             height: auto;
             background-color: white;
-            padding: 5px;
-            border-radius: 8px;
+            padding: 10px;
+            border-radius: 12px;
+            border: 2px solid #fde8e3;
         }
-        
         footer {
             text-align: center;
             padding: 40px 0 20px;
-            border-top: 1px solid #e8e0d5;
+            border-top: 2px solid #fde8e3;
             margin-top: 50px;
+            background-color: #fde8e3;
+            border-radius: 10px;
         }
-        
+        footer p {
+            color: #4a3b2c;
+            font-weight: 500;
+        }
         nav {
             padding: 20px 0 20px 20px;
             margin-bottom: 20px;
-            border-bottom: 1px solid #e8e0d5;
+            border-bottom: 2px solid #fde8e3;
         }
-        
         nav a {
             color: #8b7a6b;
             text-decoration: none;
             margin-right: 25px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            font-weight: 500;
         }
-        
         nav a:hover {
             color: #d4af37;
         }
-        
         h1, h2 {
             text-align: center;
         }
-        
         @media (max-width: 768px) {
             .vm-container, .team-grid, .features-grid {
                 flex-direction: column;
                 gap: 20px;
             }
             .cursive-main {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             .cursive-title {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             .visit-block {
                 margin: 20px;
@@ -264,7 +245,8 @@
                 font-size: 0.7rem;
             }
             .site-logo {
-                max-width: 90px;
+                max-width: 140px;
+                padding: 8px;
             }
         }
     </style>
@@ -276,12 +258,12 @@
         <a href="about.html">ABOUT</a>
         <a href="services.html">SERVICES</a>
         <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="enquiry.html">ENQUIRY</a>
         <a href="contact.html">CONTACT</a>
     </nav>
 
-    <!-- IMAGE LOGO -->
     <div class="logo-container">
-        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+        <img src="images/The Glow Republic logo.png" alt="The Glow Republic Logo" class="site-logo">
     </div>
 
     <h1 class="cursive-main">About The Glow Republic</h1>
@@ -319,19 +301,19 @@
     
     <div class="team-grid">
         <div class="team-member">
-            <img src="images/team1.jpg" alt="Ashley Ndawana">
+            <img src="images/Ashley Ndawana.png" alt="Ashley Ndawana - Senior Brow Artist and Lash Specialist at The Glow Republic in Sunninghill">
             <h3>Ashley Ndawana</h3>
             <p class="team-title">Senior Brow Artist & Lash Specialist</p>
             <p class="team-bio">With 6 years of experience in brow lamination, microblading, and lash extensions, Ashley is our resident perfectionist. She's trained in advanced brow mapping techniques and has completed certifications with leading aesthetic academies. Her attention to detail ensures every client leaves with perfectly balanced brows.</p>
         </div>
         <div class="team-member">
-            <img src="images/team2.jpg" alt="Natasha Lenonyane">
+            <img src="images/Natasha Lenonyane.png" alt="Natasha Lenonyane - Lead Facial Therapist at The Glow Republic in Sandton">
             <h3>Natasha Lenonyane</h3>
             <p class="team-title">Lead Facial Therapist</p>
             <p class="team-bio">Natasha specializes in corrective skincare and advanced facial treatments. She's passionate about helping clients understand their skin and build routines that work for them. Her calming energy and expert touch make every facial feel like a mini-vacation. She's certified in chemical peels and LED therapy.</p>
         </div>
         <div class="team-member">
-            <img src="images/team3.jpg" alt="Priya Singh">
+            <img src="images/Priya Singh.jpg" alt="Priya Singh - Lash Extension Artist at The Glow Republic in Sunninghill">
             <h3>Priya Singh</h3>
             <p class="team-title">Lash Extension Artist</p>
             <p class="team-bio">Priya joined our team with a background in fine arts, which makes her lash application incredibly precise and artistic. She creates stunning classic, hybrid, and volume sets that perfectly frame your eyes. Her gentle technique and careful isolation ensure comfortable application and long-lasting results.</p>
@@ -343,23 +325,18 @@
     <h2>Why Choose The Glow Republic</h2>
     <div class="features-grid">
         <div class="feature">
-            <img src="images/location.jpg" alt="Convenient Location - Sunninghill" class="feature-img">
+            <img src="images/Convenient Location - Sunninghill.jpg" alt="Convenient location of The Glow Republic in Sunninghill, Sandton with free parking" class="feature-img">
             <h3>📍 Convenient Location</h3>
             <p>We're located in the heart of Sunninghill with free, secure parking. Easy access from Rivonia Road and Maxwell Drive.</p>
         </div>
         <div class="feature">
-            <img src="images/team-photo.jpg" alt="Our Certified Team" class="feature-img">
+            <img src="images/Our Certified Team.png" alt="Certified team of aesthetic professionals at The Glow Republic in Sunninghill" class="feature-img">
             <h3>🌸 Certified Team</h3>
             <p>Our team is fully certified and participates in ongoing monthly training to stay current with the latest industry techniques and safety standards.</p>
         </div>
         <div class="feature">
-            <img src="images/clean-studio.jpg" alt="Clean Studio Environment" class="feature-img">
-            <h3>🧼 Clean Studio</h3>
-            <p>All tools are sterilized to medical-grade standards, and our studio maintains the highest levels of cleanliness and hygiene.</p>
-        </div>
-        <div class="feature">
-            <img src="images/walkins.jpg" alt="Walk-ins Welcome" class="feature-img">
-            <h3>👋 Walk-ins Welcome</h3>
+            <img src="images/Clean Studio Environment.jpg" alt="Clean Studio Environment" class="feature-img">
+<h3>👋 Walk-ins Welcome</h3>
             <p>Walk-ins welcome, but appointments are recommended to avoid waiting. Same day bookings available subject to availability.</p>
         </div>
     </div>
