@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Testimonials | The Glow Republic</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Client Reviews | The Glow Republic</title>
+    <meta name="description" content="Read what our clients say about The Glow Republic. Real reviews from clients in Sunninghill, Sandton. Rated 4.9/5 stars for brow lamination, lash extensions and facials.">
     <link rel="stylesheet" href="css/style.css">
     
     <style>
+        /* ====== TOP PART STYLES (Same as other pages) ====== */
+        nav {
+            padding: 20px 0 20px 20px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #fde8e3;
+        }
+        
+        nav a {
+            color: #8b7a6b;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #d4af37;
+        }
+        
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .site-logo {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 12px;
+            border: 2px solid #fde8e3;
+        }
+        
+        /* PINK LINE AFTER NAVIGATION */
+        .pink-line {
+            background-color: #fde8e3;
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .pink-line p {
+            margin: 0;
+            color: #4a3b2c;
+            font-weight: 500;
+        }
+
+        /* ====== REVIEW CARDS (White background) ====== */
         .review-cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -53,50 +108,25 @@
             margin-top: 8px;
         }
         
-        /* LOGO IMAGE STYLES */
-        .logo-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .site-logo {
-            max-width: 120px;
-            width: 100%;
-            height: auto;
-            background-color: white;
-            padding: 5px;
-            border-radius: 8px;
-        }
-        
+        /* ====== FOOTER ====== */
         footer {
             text-align: center;
             padding: 40px 0 20px;
-            border-top: 1px solid #e8e0d5;
+            border-top: 2px solid #fde8e3;
             margin-top: 50px;
+            background-color: #fde8e3;
+            border-radius: 10px;
         }
         
-        nav {
-            padding: 20px 0 20px 20px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #e8e0d5;
+        footer p {
+            color: #4a3b2c;
+            font-weight: 500;
         }
         
-        nav a {
-            color: #8b7a6b;
-            text-decoration: none;
-            margin-right: 25px;
-            font-size: 0.85rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-        
-        nav a:hover {
-            color: #d4af37;
-        }
-        
+        /* ====== TYPOGRAPHY ====== */
         h1 {
             text-align: center;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #4a3b2c;
             font-weight: 300;
             letter-spacing: 3px;
@@ -105,7 +135,7 @@
         
         h2 {
             text-align: center;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             color: #4a3b2c;
             font-weight: 400;
             letter-spacing: 2px;
@@ -114,13 +144,14 @@
         
         p {
             color: #8b7a6b;
-            line-height: 1.6;
+            line-height: 1.8;
             text-align: center;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
         
+        /* ====== RESPONSIVE ====== */
         @media (max-width: 768px) {
             .review-cards {
                 grid-template-columns: 1fr;
@@ -130,37 +161,50 @@
                 font-size: 0.7rem;
             }
             .site-logo {
-                max-width: 90px;
+                max-width: 140px;
+                padding: 8px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.4rem;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- ====== NAVIGATION ====== -->
     <nav>
         <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
         <a href="services.html">SERVICES</a>
         <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="enquiry.html">ENQUIRY</a>
         <a href="contact.html">CONTACT</a>
     </nav>
 
-    <!-- IMAGE LOGO -->
+    <!-- ====== PINK LINE ====== -->
+
+    <!-- ====== LOGO ====== -->
     <div class="logo-container">
-        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+        <img src="images/The Glow Republic logo.png" alt="The Glow Republic logo - aesthetic studio for brows, lashes and facials in Sunninghill, Sandton" class="site-logo">
     </div>
 
+    <!-- ====== PAGE TITLE ====== -->
     <h1>What Our Clients Say</h1>
     <p>Don't just take our word for it - hear from the wonderful clients who have trusted The Glow Republic with their brows, lashes, and skin. We're proud to have earned a 4.9/5 star rating across Google, Instagram, and Facebook since opening in 2025.</p>
     <p>Every review shared here is from a real client who visited our Sunninghill studio. We're grateful for their trust and feedback, which helps us continually improve and grow.</p>
 
+    <!-- ====== REVIEW CARDS (White) ====== -->
     <h2>⭐ Brow Services Reviews</h2>
     <div class="review-cards">
         <div class="card">
             <div class="stars">⭐⭐⭐⭐⭐</div>
             <p class="quote">"Best brows ever! I got the lamination + tint package and I'm obsessed. My brows look so natural and full. The technician really listened to what I wanted and explained every step. Will definitely be back for my infills."</p>
             <p class="client">- Sarah M., Sunninghill</p>
-            <p class="service-tag">Sword ombré</p>
+            <p class="service-tag">Brow Lamination & Tint</p>
         </div>
         <div class="card">
             <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -204,7 +248,7 @@
             <div class="stars">⭐⭐⭐⭐⭐</div>
             <p class="quote">"The algae peel facial treatment was exactly what my congested and dull skin needed. My face was rejuvenated, smooth and glowing. Highly recommend for anyone in the city."</p>
             <p class="client">- Delan Salleh, Fourways</p>
-            <p class="service-tag">Algae peel</p>
+            <p class="service-tag">Algae Peel</p>
         </div>
         <div class="card">
             <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -220,6 +264,7 @@
         </div>
     </div>
 
+    <!-- ====== FOOTER ====== -->
     <footer>
         <p>Sunninghill, Sandton, South Africa</p>
     </footer>
