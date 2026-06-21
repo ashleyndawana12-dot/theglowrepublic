@@ -16,17 +16,21 @@
         .enquiry-card {
             background: white;
             padding: 40px;
-            border: 1px solid #e8e0d5;
+            border: 1px solid #fde8e3;
             transition: all 0.3s ease;
+            border-radius: 15px;
         }
         
         .enquiry-card:hover {
             border-color: #d4af37;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.08);
         }
         
         .enquiry-card h1 {
             text-align: center;
             margin-bottom: 10px;
+            font-size: 2.5rem;
+            color: #4a3b2c;
         }
         
         .enquiry-card p {
@@ -39,35 +43,38 @@
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #e8e0d5;
-            border-radius: 0;
+            border: 1px solid #fde8e3;
+            border-radius: 8px;
             background-color: white;
             font-family: inherit;
             font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
         
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
         }
         
         .submit-btn {
-            background-color: transparent;
-            color: #8b7a6b;
-            padding: 12px 25px;
-            border: 1px solid #d4af37;
-            border-radius: 0;
+            background-color: #d4af37;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 30px;
             cursor: pointer;
-            font-weight: 400;
+            font-weight: bold;
             letter-spacing: 2px;
             width: 100%;
-            margin-top: 10px;
+            margin-top: 15px;
             transition: all 0.3s ease;
+            font-size: 1rem;
         }
         
         .submit-btn:hover {
-            background-color: #d4af37;
-            color: white;
+            background-color: #c49a3a;
+            transform: scale(1.02);
         }
         
         .required {
@@ -87,34 +94,43 @@
         }
         
         .site-logo {
-            max-width: 120px;
+            max-width: 200px;
             width: 100%;
             height: auto;
             background-color: white;
-            padding: 5px;
-            border-radius: 8px;
+            padding: 10px;
+            border-radius: 12px;
+            border: 2px solid #fde8e3;
         }
         
         footer {
             text-align: center;
             padding: 40px 0 20px;
-            border-top: 1px solid #e8e0d5;
+            border-top: 2px solid #fde8e3;
             margin-top: 50px;
+            background-color: #fde8e3;
+            border-radius: 10px;
+        }
+        
+        footer p {
+            color: #4a3b2c;
+            font-weight: 500;
         }
         
         nav {
             padding: 20px 0 20px 20px;
             margin-bottom: 20px;
-            border-bottom: 1px solid #e8e0d5;
+            border-bottom: 2px solid #fde8e3;
         }
         
         nav a {
             color: #8b7a6b;
             text-decoration: none;
             margin-right: 25px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            font-weight: 500;
         }
         
         nav a:hover {
@@ -125,12 +141,16 @@
             .enquiry-card {
                 padding: 20px;
             }
+            .enquiry-card h1 {
+                font-size: 2rem;
+            }
             nav a {
                 margin-right: 15px;
                 font-size: 0.7rem;
             }
             .site-logo {
-                max-width: 90px;
+                max-width: 140px;
+                padding: 8px;
             }
         }
     </style>
@@ -147,28 +167,24 @@
     </nav>
 
     <div class="logo-container">
-        <img src="images/logo.png" alt="The Glow Republic Logo" class="site-logo">
+        <img src="images/The Glow Republic logo.png" alt="The Glow Republic Logo" class="site-logo">
     </div>
 
     <div class="enquiry-container">
         <div class="enquiry-card">
-            <h1>Service Enquiry</h1>
+            <h1>📋 Service Enquiry</h1>
             <p>Interested in our brow, lash, or facial treatments? Fill out the form below and we'll get back to you within 4 hours with availability and pricing.</p>
             
             <form action="#" method="POST" id="enquiryForm">
-                <!-- Name -->
                 <label for="enquiry-name">Full Name <span class="required">*</span></label>
                 <input type="text" id="enquiry-name" name="name" placeholder="Your full name" required>
                 
-                <!-- Phone -->
                 <label for="enquiry-phone">Phone Number <span class="required">*</span></label>
                 <input type="tel" id="enquiry-phone" name="phone" placeholder="+27 81 234 5678" required>
                 
-                <!-- Email -->
                 <label for="enquiry-email">Email Address</label>
                 <input type="email" id="enquiry-email" name="email" placeholder="your@email.com">
                 
-                <!-- Service Selection -->
                 <label for="enquiry-service">Service Interested In <span class="required">*</span></label>
                 <select id="enquiry-service" name="service" required>
                     <option value="">Select a service...</option>
@@ -188,19 +204,15 @@
                     <option value="not-sure">Not sure - consultation needed</option>
                 </select>
                 
-                <!-- Preferred Date -->
                 <label for="enquiry-date">Preferred Date</label>
                 <input type="date" id="enquiry-date" name="preferred-date">
                 
-                <!-- Preferred Time -->
                 <label for="enquiry-time">Preferred Time</label>
                 <input type="time" id="enquiry-time" name="preferred-time">
                 
-                <!-- Questions -->
                 <label for="enquiry-message">Questions or Special Requests</label>
                 <textarea id="enquiry-message" name="message" rows="5" placeholder="Do you have any questions about pricing, availability, or aftercare? Let us know..."></textarea>
                 
-                <!-- How did you hear about us? -->
                 <label for="enquiry-hear">How did you hear about us?</label>
                 <select id="enquiry-hear" name="hear-about">
                     <option value="">Select an option...</option>
@@ -213,7 +225,6 @@
                     <option value="other">Other</option>
                 </select>
                 
-                <!-- Submit Button -->
                 <button type="submit" class="submit-btn">SUBMIT ENQUIRY →</button>
             </form>
             
